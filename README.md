@@ -1,4 +1,4 @@
-# Tela-de-login.
+<!-- # Tela-de-login.
 Tela de Login - README
 
 Este é um projeto de uma tela de login simples desenvolvida utilizando HTML e CSS. A tela de login inclui campos para usuário, senha e a opção de criar uma nova conta. Além disso, um background degradê verde foi aplicado ao fundo para dar um toque visual agradável.
@@ -29,4 +29,4 @@ A tela de login será exibida, com campos para usuário e senha, além de um bot
 Navegue até a pasta do projeto.
 
 ```shell
-     git clone https://github.com/Romariolima99/Tela-de-login
+     git clone https://github.com/Romariolima99/Tela-de-login -->
