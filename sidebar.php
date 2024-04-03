@@ -1,3 +1,11 @@
+<?php  
+
+if(isset($_SESSION)){
+  session_start();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -35,12 +43,12 @@
       <div id="tools" class="subnav">
         <div class="subnav-inner">
           <button>
+            <span>Consultar veiculos</span>
+          </button>
+          <button>
             <span>relatório de veículos</span>
           </button>
           <!-- <button>
-            <span>Editor</span>
-          </button>
-          <button>
             <span>Temas</span>
           </button> -->
         </div>
