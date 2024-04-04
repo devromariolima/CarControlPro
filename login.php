@@ -9,7 +9,7 @@ if(isset($_POST['email']) && isset($_POST['senha'])) { // Corrigido para verific
   if(strlen($_POST['email']) == 0 ) {
     echo "Preencha seu email";
   } else if(strlen($_POST['senha']) == 0 ) {
-    echo "Preencha sua senha";
+    // echo "Preencha sua senha";
   } else {
   
     $email = $mysqli->real_escape_string($_POST['email']);

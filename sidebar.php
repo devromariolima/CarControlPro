@@ -39,19 +39,16 @@ if(isset($_SESSION)){
         <span class="material-symbols-outlined"> build </span>
         <span>Manutenção de Veículos</span>
         <span class="material-symbols-outlined"> expand_more </span>
-      </button>
-      <div id="tools" class="subnav">
-        <div class="subnav-inner">
-          <button>
-            <span>Consultar veiculos</span>
-          </button>
-          <button>
-            <span>relatório de veículos</span>
-          </button>
-          <!-- <button>
-            <span>Temas</span>
-          </button> -->
-        </div>
+       </button>
+       <div id="tools" class="subnav">
+      <div class="subnav-inner">
+       <form action="consulta_veiculos.php" method="post">
+        <button type="submit" class="btn">Consultar veiculos</button>
+       </form>
+       <button>
+        <span>relatório de veículos</span>
+        </button>
+      </div>
       </div>
       <button onclick="handleHeaderClicked('settings')">
         <span class="material-symbols-outlined"> settings </span>
@@ -60,9 +57,9 @@ if(isset($_SESSION)){
       </button>
       <div id="settings" class="subnav">
         <div class="subnav-inner">
-          <button>
-            <span>Porto dos Gaúchos</span>
-          </button>
+        <form action="consulta_veiculos_porto.php" method="post">
+        <button type="submit" class="btn">Porto dos gauchos</button>
+       </form>
           <button>
             <span>Brasnorte</span>
           </button>
