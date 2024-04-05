@@ -4,6 +4,10 @@ if(isset($_SESSION)){
   session_start();
 }
 
+// include_once('logout.php');
+
+include_once('conexao.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +32,7 @@ if(isset($_SESSION)){
   <body>
     <aside class="sidebar">
       <header>
-        <img src="assets/logo.svg" />
+        <img src="assets/viafertil.png" />
         <span> Manutenção de Frotas </span>
       </header>
       <button>
@@ -75,11 +79,39 @@ if(isset($_SESSION)){
         <span class="material-symbols-outlined"> account_circle </span>
         <span>Perfil</span>
       </button>
-      <button>
+      <button id="Close" onclick="Logout()">
         <span class="material-symbols-outlined"> logout </span>
-        <span>Sair</span>
+        <span id="btnClose" >Sair</span>
       </button>
     </aside>
+
+
     <script src="js/main_dropdown.js"></script>
+
+
+    <script>
+      document.getElementById('Close').addEventListener('click', function Logout() {
+    // Envie uma solicitação para o arquivo logout.php
+    fetch('logout.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ logout: true })
+    })
+    .then(response => {
+        if (response.ok) {
+            // Redirecione para a página de login ou para onde desejar
+            window.location.href = 'login.php'; console.log("deu certo");
+        } else {
+            // Trate qualquer erro aqui, como exibir uma mensagem de erro para o usuário
+            console.error('Erro ao encerrar a sessão');
+        }
+    })
+    .catch(error => {
+        console.error('Erro de rede:', error);
+    });
+});
+</script>
   </body>
 </html>
