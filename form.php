@@ -1,33 +1,66 @@
 <?php
-if (isset($_POST['submit']) )
-
-{
+if (!empty($_GET['id'])) 
+ {
 
   include_once('conexao.php');
 
-  $placa = $_POST['placa'];
-  $descricao_do_veiculo = $_POST['descricao_do_veiculo'];
-  $marca = $_POST['marca'];
-  $modelo = $_POST['modelo'];
-  $ano_de_fabricacao = $_POST['ano_de_fabricacao'];
-  $valor = $_POST['valor'];
-  $tara = $_POST['tara'];
-  $unidade_federativa = $_POST['unidade_federativa'];
-  $situacao = $_POST['situacao'];
-  $local_de_uso = $_POST['local_de_uso'];
-  $responsavel = $_POST['responsavel'];
-  $vencimento_do_seguro = $_POST['vencimento_do_seguro'];
-  $vencimento_do_ipva = $_POST['vencimento_do_ipva'];
+    $id = $_GET['id'];
 
-  $result = mysqli_query($mysqli , "INSERT INTO carros(placa,descricao_do_veiculo,marca,modelo,ano_de_fabricacao,valor,tara,unidade_federativa,situacao,local_de_uso, responsavel,vencimento_do_seguro,vencimento_do_ipva)
- VALUES ('$placa','$descricao_do_veiculo','$marca','$modelo','$ano_de_fabricacao','$valor','$tara','$unidade_federativa','$situacao','$local_de_uso','$responsavel','$vencimento_do_seguro','$vencimento_do_ipva')");
+    $sqlselect = "SELECT * FROM carros WHERE id=$id";
+
+    $result = $mysqli->query($sqlselect);
+
+    if ($result->num_rows > 0) 
+        while ($userdata = mysqli_fetch_assoc($result)) 
+      {
+
+        $placa = $userdata['placa'];
+        $descricao_do_veiculo = $userdata['descricao_do_veiculo'];
+        $marca = $userdata['marca'];
+        $modelo = $userdata['modelo'];
+        $ano_de_fabricacao = $userdata['ano_de_fabricacao'];
+        $valor = $userdata['valor'];
+        $tara = $userdata['tara'];
+        $unidade_federativa = $userdata['unidade_federativa'];
+        $situacao = $userdata['situacao'];
+        $local_de_uso = $userdata['local_de_uso'];
+        $responsavel = $userdata['responsavel'];
+        $vencimento_do_seguro = $userdata['vencimento_do_seguro'];
+        $vencimento_do_ipva = $userdata['vencimento_do_ipva'];
+}   
 
 
-  //  header('Location: login.php');
-}
-
-
+      }
+           
 ?>
+
+
+
+
+
+  <!-- // $placa = $_POST['placa'];
+  // $descricao_do_veiculo = $_POST['descricao_do_veiculo'];
+  // $marca = $_POST['marca'];
+  // $modelo = $_POST['modelo'];
+  // $ano_de_fabricacao = $_POST['ano_de_fabricacao'];
+  // $valor = $_POST['valor'];
+  // $tara = $_POST['tara'];
+  // $unidade_federativa = $_POST['unidade_federativa'];
+  // $situacao = $_POST['situacao'];
+  // $local_de_uso = $_POST['local_de_uso'];
+  // $responsavel = $_POST['responsavel'];
+  // $vencimento_do_seguro = $_POST['vencimento_do_seguro'];
+  // $vencimento_do_ipva = $_POST['vencimento_do_ipva']; -->
+
+<!-- //   $result = mysqli_query($mysqli , "INSERT INTO carros(placa,descricao_do_veiculo,marca,modelo,ano_de_fabricacao,valor,tara,unidade_federativa,situacao,local_de_uso, responsavel,vencimento_do_seguro,vencimento_do_ipva)
+//  VALUES ('$placa','$descricao_do_veiculo','$marca','$modelo','$ano_de_fabricacao','$valor','$tara','$unidade_federativa','$situacao','$local_de_uso','$responsavel','$vencimento_do_seguro','$vencimento_do_ipva')"); -->
+
+<!-- 
+  //  header('Location: login.php'); -->
+<!-- } -->
+
+
+<!-- ?> -->
 
 
 <!DOCTYPE html>
@@ -53,65 +86,75 @@ if (isset($_POST['submit']) )
 <!------ Inicio do formulario ---------->
                     
    <div class="p-3 mb-2 text-white color-global">Dados do veiculo</div>
-                     <form action="form.php" method="POST">
+                     <form action="saveEdit_form.php" method="POST">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputName">Placa</label>
-                                <input type="text" name="placa" id="placa" class="form-control" placeholder="Placa" required>
+                                <input type="text" name="placa" id="placa" class="form-control" placeholder="Placa" value="<?php echo $placa ?>" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputSurname">Descrição do veiculo</label>
-                                <input type="text" name="descricao_do_veiculo" id="descricao_do_veiculo" class="form-control" id="inputSurname" placeholder="Descrição do veiculo" required>
+                                <input type="text" name="descricao_do_veiculo" id="descricao_do_veiculo" class="form-control" id="inputSurname" placeholder="Descrição do veiculo" value="<?php echo $descricao_do_veiculo ?>" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Marca</label>
-                                <input type="text" class="form-control" name="marca" id="marca" placeholder="Marca" required>
+                                <input type="text" class="form-control" name="marca" id="marca" placeholder="Marca" value="<?php echo  $marca ?>" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Modelo</label>
-                                <input type="text" class="form-control" name="modelo" id="modelo" placeholder="Modelo" required>
+                                <input type="text" class="form-control" name="modelo" id="modelo" placeholder="Modelo" value="<?php echo $modelo ?>" required>
                             </div>
                             <div class="form-group col-md-6">
                               <label for="inputPassword4">Ano de fabricação </label>
-                              <input type="Date" class="form-control" name="ano_de_fabricacao" id="ano_de_fabricacao" placeholder="Ano de fabricação" required>
+                              <input type="Date" class="form-control" name="ano_de_fabricacao" id="ano_de_fabricacao" placeholder="Ano de fabricação" value="<?php echo $ano_de_fabricacao ?>" required>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="inputPassword4">Valor</label>
-                            <input type="number" class="form-control" name="valor" id="valor" placeholder="Valor do veiculo" required>
+                            <input type="text" class="form-control" name="valor" id="valor" placeholder="Valor do veiculo" value="<?php echo $valor ?>" required>
                         </div>
                         <div class="form-group col-md-6">
                           <label for="inputPassword4">Tara</label>
-                          <input type="number" class="form-control" name="tara" id="tara" placeholder="Tara do veiculo" required>
+                          <input type="number" class="form-control" name="tara" id="tara" placeholder="Tara do veiculo" value="<?php echo $tara ?>" required>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="inputPassword4">Unidade federativa</label>
-                        <input type="text" class="form-control" name="unidade_federativa" id="unidade_federativa" placeholder="Unidade federativa" required>
+                        <input type="text" class="form-control" name="unidade_federativa" id="unidade_federativa" placeholder="Unidade federativa" value="<?php echo $unidade_federativa ?>" required>
                     </div>
                 </div>
 
                           
                 <div class="p-3 mb-2 text-white color-global">Mais Informações</div>
-                <form action="" method="POST">
                    <div class="form-row">
-                       <div class="form-group col-md-6">
-                           <label for="inputName">Situação</label>
-                           <input type="text"  class="form-control" name="situacao" id="situacao" placeholder="Ativo/Inativo" required>
+                      <div class="form-group col-md-6">
+                          <label for="inputName">Situação</label>
+                          <select class="form-control" id="exampleFormControlSelect1" name="situacao" required>
+                              <option value="Ativo" <?php if ($situacao == "Ativo") echo "selected"; ?>>Ativo</option>
+                              <option value="Inativo" <?php if ($situacao == "Inativo") echo "selected"; ?>>Inativo</option>
+                          </select>
+                      </div>
+
+                      <div class="form-group col-md-6">
+                        <label for="inputSurname">Local de uso</label>
+                          <select class="form-control" id="exampleFormControlSelect1" name="local_de_uso" required> 
+                            <option <?php if ($local_de_uso == "Porto dos Gauchos") echo "selected"; ?>>Porto dos Gauchos</option>
+                             <option <?php if ($local_de_uso == "Juara") echo "selected"; ?>>Juara</option>
+                             <option <?php if ($local_de_uso == "Brasnorte") echo "selected"; ?>>Brasnorte</option>
+                           </select>
                        </div>
-                       <div class="form-group col-md-6">
-                           <label for="inputSurname">Local de uso</label>
-                           <input type="text" class="form-control" name="local_de_uso" id="local_de_uso" placeholder="Local de uso" required>
-                       </div>
+
                        <div class="form-group col-md-6">
                            <label for="inputEmail4">Responsavel</label>
-                           <input type="text" class="form-control" name="responsavel" id="responsavel" placeholder="responsavel" required>
+                           <input type="text" class="form-control" name="responsavel" id="responsavel" placeholder="responsavel" value="<?php echo $responsavel ?>" required>
                        </div>
+
                        <div class="form-group col-md-6">
                            <label for="inputPassword4">Vencimento do seguro</label>
-                           <input type="Date" class="form-control" name="vencimento_do_seguro" id="vencimento_do_seguro" placeholder="Vencimento do seguro" required>
+                           <input type="Date" class="form-control" name="vencimento_do_seguro" id="vencimento_do_seguro" placeholder="Vencimento do seguro" value="<?php echo $vencimento_do_seguro ?>" required>
                        </div>
+
                        <div class="form-group col-md-6">
                          <label for="inputPassword4">vencimento do IPVA</label>
-                         <input type="Date" class="form-control" name="vencimento_do_ipva" id="vencimento_do_ipva" placeholder="vencimento do IPVA" required>
+                         <input type="Date" class="form-control" name="vencimento_do_ipva" id="vencimento_do_ipva" placeholder="vencimento do IPVA" value="<?php echo $vencimento_do_ipva ?>" required>
                      </div>
                  </div>
 
@@ -144,7 +187,8 @@ if (isset($_POST['submit']) )
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="submit" name="submit" id="submit" class="btn color-global-btn">Salvar</button>
+       <input type="hidden" name="id" value="<?php echo $id ?>">
+        <button type="submit" name="update" id="update" class="btn color-global-btn">Salvar</button>
       </div>
     </div>
   </div>
