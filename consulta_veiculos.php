@@ -58,7 +58,7 @@ $result = $mysqli->query($sql);
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="form_cadastro.php">Cadastrar Veiculos</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Relatorios</a>
+                <a class="dropdown-item" href="relatorio_carros_geral.php">Relatorios</a>
               </div>
 
               <li class="nav-item dropdown">
