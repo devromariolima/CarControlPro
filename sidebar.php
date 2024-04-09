@@ -49,9 +49,9 @@ include_once('conexao.php');
        <form action="consulta_veiculos.php" method="post">
         <button type="submit" class="btn">Consultar veiculos</button>
        </form>
-       <button>
+       <!-- <button>
         <span>relatório de veículos</span>
-        </button>
+        </button> -->
       </div>
       </div>
       <button onclick="handleHeaderClicked('settings')">
