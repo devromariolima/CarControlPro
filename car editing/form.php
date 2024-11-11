@@ -84,7 +84,7 @@ if (!empty($_GET['id'])) {
     <!------ Inicio do formulario ---------->
 
     <div class="p-3 mb-2 text-white color-global">Dados do veiculo</div>
-    <form action="saveEdit_form.php" method="POST">
+    <form action="save car/saveEdit_form.php" method="POST">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputName">Placa</label>

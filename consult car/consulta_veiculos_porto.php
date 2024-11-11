@@ -1,5 +1,5 @@
 <?php
-include('conexao.php');
+include('../conexao.php');
 
 $sql = "SELECT * FROM carros WHERE local_de_uso = 'Porto dos gauchos'";
 $result = $mysqli->query($sql);

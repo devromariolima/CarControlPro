@@ -1,5 +1,5 @@
 <?php
-include('conexao.php');
+include('../conexao.php');
 // include_once('delete.php');
 
 $sql = "SELECT * FROM carros ORDER BY id";

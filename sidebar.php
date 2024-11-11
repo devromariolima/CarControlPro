@@ -1,5 +1,7 @@
 <?php
 
+include_once('conexao.php');
+
 if (isset($_SESSION)) {
   session_start();
 }
@@ -43,7 +45,7 @@ include_once('conexao.php');
     </button>
     <div id="maintenance" class="subnav">
       <div class="subnav-inner">
-        <form action="consulta_veiculos.php" method="post">
+        <form action="consult car/consulta_veiculos.php" method="post">
           <button type="submit" class="btn">Consultar Clientes</button>
         </form>
         <button>
@@ -59,7 +61,7 @@ include_once('conexao.php');
     </button>
     <div id="tools" class="subnav">
       <div class="subnav-inner">
-        <form action="consulta_veiculos.php" method="post">
+        <form action="./consult car/consulta_veiculos.php" method="post">
           <button type="submit" class="btn">Consultar veiculos</button>
         </form>
         <button>
@@ -75,7 +77,7 @@ include_once('conexao.php');
 
     <div id="settings" class="subnav">
       <div class="subnav-inner">
-        <form action="consulta_veiculos_porto.php" method="post">
+        <form action="consult car/consulta_veiculos_porto.php" method="post">
           <button type="submit" class="btn">Porto dos gauchos</button>
         </form>
         <button>
