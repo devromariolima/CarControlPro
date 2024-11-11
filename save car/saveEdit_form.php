@@ -1,11 +1,7 @@
 <?php
+include_once('../conexao.php');
 
-include_once('conexao.php');
-
-if(isset($_POST['update']))
-{
-
-
+if (isset($_POST['update'])) {
     $id = $_POST['id'];
     $placa = $_POST['placa'];
     $descricao_do_veiculo = $_POST['descricao_do_veiculo'];
@@ -21,16 +17,16 @@ if(isset($_POST['update']))
     $vencimento_do_seguro = $_POST['vencimento_do_seguro'];
     $vencimento_do_ipva = $_POST['vencimento_do_ipva'];
 
-    $sqlUpdate = "UPDATE carros SET placa='$placa',descricao_do_veiculo='$descricao_do_veiculo',marca='$marca',ano_de_fabricacao='$ano_de_fabricacao',modelo='$modelo',valor='$valor',tara='$tara',unidade_federativa='$unidade_federativa',situacao='$situacao' ,local_de_uso='$local_de_uso',placa='$placa' ,responsavel='$responsavel' ,vencimento_do_seguro='$vencimento_do_seguro',vencimento_do_ipva='$vencimento_do_ipva'
-    WHERE id = '$id'";
+    // Atualização da query, removendo a duplicação do campo placa
+    $sqlUpdate = "UPDATE carros SET placa='$placa', descricao_do_veiculo='$descricao_do_veiculo', marca='$marca', ano_de_fabricacao='$ano_de_fabricacao', modelo='$modelo', valor='$valor', tara='$tara', unidade_federativa='$unidade_federativa', situacao='$situacao', local_de_uso='$local_de_uso', responsavel='$responsavel', vencimento_do_seguro='$vencimento_do_seguro', vencimento_do_ipva='$vencimento_do_ipva' WHERE id = '$id'";
 
-
-    $result = $mysqli->query($sqlUpdate);
-
+    // Executando a query
+    if ($mysqli->query($sqlUpdate)) {
+        // Se a query for bem-sucedida, redireciona
+        header('Location:../consult car/consulta_veiculos.php');
+        exit;  // Adicionando um exit para garantir que o script pare após o redirecionamento
+    } else {
+        // Caso a query falhe, você pode adicionar uma mensagem de erro aqui
+        echo "Erro ao atualizar o veículo: " . $mysqli->error;
+    }
 }
-
-header('Location:consulta_veiculos.php')
-
-
-
-?>
