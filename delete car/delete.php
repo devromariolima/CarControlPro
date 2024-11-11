@@ -1,27 +1,34 @@
 <?php
-if (!empty($_GET['id'])) 
- {
+if (!empty($_GET['id'])) {
+  include_once('../conexao.php');
 
-  include_once('conexao.php');
+  // Verificar conexão
+  if ($mysqli->connect_error) {
+    die("Conexão falhou: " . $mysqli->connect_error);
+  }
 
-    $id = $_GET['id'];
+  // Sanitização e tipagem
+  $id = (int) $_GET['id'];
 
-    $sqlselect = "SELECT * FROM carros WHERE id=$id";
+  // Usando prepared statement para a consulta SELECT
+  $sqlselect = "SELECT * FROM carros WHERE id = ?";
+  $stmt = $mysqli->prepare($sqlselect);
+  $stmt->bind_param("i", $id); // 'i' indica um inteiro
+  $stmt->execute();
+  $result = $stmt->get_result();
 
-    $result = $mysqli->query($sqlselect);
+  if ($result->num_rows > 0) {
+    // Usando prepared statement para a consulta DELETE
+    $sqlDelete = "DELETE FROM carros WHERE id = ?";
+    $stmtDelete = $mysqli->prepare($sqlDelete);
+    $stmtDelete->bind_param("i", $id); // 'i' indica um inteiro
+    $stmtDelete->execute();
+  }
 
-    if ($result->num_rows > 0) 
-      {
+  $stmt->close();
+  $stmtDelete->close();
+}
 
-        $sqlDelete = "DELETE FROM carros WHERE id=$id";
-        $resultDelete = $mysqli->query($sqlDelete);
-
- 
-}   
-
-
-      }
-
-      header('Location:consulta_veiculos.php')
-           
-?>
+// Redirecionamento
+header('Location: ../consult car/consulta_veiculos.php');
+exit;

@@ -44,7 +44,7 @@ $result = $mysqli->query($sql);
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="sidebar.php">
+          <a class="nav-link" href="../sidebar.php">
             <i class="fa fa-home"></i>
             Home
             <span class="sr-only">(current)</span>
@@ -59,7 +59,7 @@ $result = $mysqli->query($sql);
             Veiculos
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="form_cadastro_porto.php">Cadastrar Veiculos</a>
+            <a class="dropdown-item" href=".form_cadastro_porto.php">Cadastrar Veiculos</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="relatorio_carros_porto.php">Relatorios</a>
           </div>

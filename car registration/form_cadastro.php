@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['submit'])) {
 
-  include_once('conexao.php');
+  include_once('../conexao.php');
 
   $placa = $_POST['placa'];
   $descricao_do_veiculo = $_POST['descricao_do_veiculo'];
@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
  VALUES ('$placa','$descricao_do_veiculo','$marca','$modelo','$ano_de_fabricacao','$valor','$tara','$unidade_federativa','$situacao','$local_de_uso','$responsavel','$vencimento_do_seguro','$vencimento_do_ipva')");
 
 
-  header('Location: consulta_veiculos.php');
+  header('Location: ../consult car/consulta_veiculos.php');
 }
 
 

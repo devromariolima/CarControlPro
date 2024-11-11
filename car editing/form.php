@@ -1,7 +1,7 @@
 <?php
 if (!empty($_GET['id'])) {
 
-  include_once('conexao.php');
+  include_once('../conexao.php');
 
   $id = $_GET['id'];
 
