@@ -1,5 +1,5 @@
 <?php
-include('conexao.php');
+include('../conexao.php');
 
 $sql = "SELECT * FROM carros WHERE local_de_uso = 'Porto dos gauchos'";
 $result = $mysqli->query($sql);
@@ -9,6 +9,7 @@ require_once 'dompdf/dompdf/autoload.inc.php';
 
 // Iniciar a geração do PDF com o Dompdf
 use Dompdf\Dompdf;
+
 $dompdf = new Dompdf();
 
 // Definir orientação da página como paisagem
@@ -78,20 +79,20 @@ $html = '
 while ($row = $result->fetch_assoc()) {
     $html .= '
     <tr>
-        <td>'.$row['id'].'</td>
-        <td>'.$row['placa'].'</td>
-        <td>'.$row['descricao_do_veiculo'].'</td>
-        <td>'.$row['marca'].'</td>
-        <td>'.$row['modelo'].'</td>
-        <td>'.$row['ano_de_fabricacao'].'</td>
-        <td>'.$row['valor'].'</td>
-        <td>'.$row['tara'].'</td>
-        <td>'.$row['unidade_federativa'].'</td>
-        <td>'.$row['situacao'].'</td>
-        <td>'.$row['local_de_uso'].'</td>
-        <td>'.$row['responsavel'].'</td>
-        <td>'.$row['vencimento_do_seguro'].'</td>
-        <td>'.$row['vencimento_do_ipva'].'</td>
+        <td>' . $row['id'] . '</td>
+        <td>' . $row['placa'] . '</td>
+        <td>' . $row['descricao_do_veiculo'] . '</td>
+        <td>' . $row['marca'] . '</td>
+        <td>' . $row['modelo'] . '</td>
+        <td>' . $row['ano_de_fabricacao'] . '</td>
+        <td>' . $row['valor'] . '</td>
+        <td>' . $row['tara'] . '</td>
+        <td>' . $row['unidade_federativa'] . '</td>
+        <td>' . $row['situacao'] . '</td>
+        <td>' . $row['local_de_uso'] . '</td>
+        <td>' . $row['responsavel'] . '</td>
+        <td>' . $row['vencimento_do_seguro'] . '</td>
+        <td>' . $row['vencimento_do_ipva'] . '</td>
         <!-- Adicione mais colunas conforme necessário -->
     </tr>';
 }
@@ -111,4 +112,3 @@ $dompdf->render();
 
 // Exibir o PDF ou salvá-lo em um arquivo
 $dompdf->stream('relatorio_carros.pdf');
-?>

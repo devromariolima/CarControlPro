@@ -60,7 +60,7 @@ $result = $mysqli->query($sql);
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="../car registration/form_cadastro.php">Cadastrar Veiculos</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="relatorio_carros_geral.php">Relatorios</a>
+            <a class="dropdown-item" href="../reports car/relatorio_carros_geral.php">Relatorios</a>
           </div>
 
         <li class="nav-item dropdown">
