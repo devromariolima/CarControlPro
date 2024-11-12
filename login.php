@@ -56,7 +56,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) { // Corrigido para verifi
 </head>
 
 <body>
-  <h1>Sistema de gestão integrado</h1>
+  <h1>Car Control Pro</h1>
 
   <div class="login-page">
     <div class="form">
