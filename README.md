@@ -1,32 +1,33 @@
-<!-- # Tela-de-login.
-Tela de Login - README
+# Sistema de Gerenciamento de Clientes e Veículos
 
-Este é um projeto de uma tela de login simples desenvolvida utilizando HTML e CSS. A tela de login inclui campos para usuário, senha e a opção de criar uma nova conta. Além disso, um background degradê verde foi aplicado ao fundo para dar um toque visual agradável.
--
-# Pré-requisitos.
+- Este é um sistema em desenvolvimento para gerenciar clientes e veículos. O projeto utiliza tecnologias de front-end como HTML, CSS, Bootstrap e JavaScript, e PHP para o back-end. O armazenamento de dados é feito com MySQL. O sistema conta com funcionalidades básicas, como autenticação, cadastro e edição de clientes e veículos, além de dashboards para visualização dos dados.
 
-- Certifique-se de ter um navegador web atualizado para visualizar a tela de login de forma adequada.
+# Funcionalidades Implementadas
 
-# Estrutura do Projeto
-- `index.html`: O arquivo HTML que contém a estrutura da página, incluindo os campos de entrada e botões.
-- `style.css`: O arquivo CSS que define o estilo da página, incluindo o degradê verde de fundo.
+- Autenticação de Usuário: Login com usuário e senha para acessar o sistema.
+- Cadastro de Clientes: Possibilidade de cadastrar novos clientes no sistema.
+- Edição de Clientes: Permite editar informações de clientes já cadastrados.
+- Cadastro de Veículos: Cadastro de veículos associados aos clientes.
+- Edição de Veículos: Atualização e edição das informações de veículos cadastrados.
+- Dashboard Simples: Exibição de dados estatísticos e informações principais de clientes e veículos de forma resumida.
+- Separação por Bases: Organização dos dados em diferentes bases de dados, dependendo do escopo do cliente.
+- Relatórios Gerenciais: Emissão de relatórios em PDF com informações detalhadas de clientes e veículos.
 
-# Como Executar.
-Abra o arquivo index.html em um navegador web de sua preferência.
-A tela de login será exibida, com campos para usuário e senha, além de um botão para criar uma conta.
+# Tecnologias Utilizadas
+## Front-end
+- HTML5: Estruturação das páginas.
+- CSS3: Estilização das páginas.
+- Bootstrap: Framework CSS para um layout responsivo e componentes prontos.
+- JavaScript: Lógica do lado do cliente e interatividade.
 
-# Personalização
+# Back-end
+- PHP: Processamento de dados no servidor e lógica de negócios.
+- MySQL: Banco de dados relacional para armazenamento de informações de clientes e veículos.
 
-- Se desejar personalizar ainda mais a tela de login, você pode modificar o arquivo style.css para ajustar cores, fontes e outros elementos visuais de acordo com suas preferências.
+## Pré-requisitos
+- Para executar este projeto localmente, é necessário ter as seguintes ferramentas instaladas:
 
-- Espero que este README seja útil para o seu projeto de tela de login!
-
-<img src="https://i.imgur.com/O87hCzo.jpg" alt="GIF" data-canonical-src="https://i.imgur.com/O87hCzo.jpg" style="max-width: 50%;">
-
-# Instruções de Uso.
-
-- Faça o download ou clone este repositório para o seu computador.
-Navegue até a pasta do projeto.
-
-```shell
-     git clone https://github.com/Romariolima99/Tela-de-login -->
+- PHP (versão 7.4 ou superior)
+- MySQL (ou MariaDB)
+- Servidor Apache (recomendado o uso do XAMPP ou WAMP)
+- Composer (se utilizar alguma biblioteca PHP externa)
