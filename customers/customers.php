@@ -100,19 +100,19 @@ $result = $mysqli->query($sql);
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Placa</th>
-                    <th scope="col">Descrição do veiculo</th>
-                    <th scope="col">Marca</th>
-                    <th scope="col">Modelo</th>
-                    <th scope="col">Ano de fabricação</th>
-                    <th scope="col">Valor</th>
-                    <th scope="col">Tara</th>
-                    <th scope="col">Unidade federativa</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">RG</th>
+                    <th scope="col">CPF/CNPJ</th>
+                    <th scope="col">Profissão</th>
+                    <th scope="col">Data de nascimento</th>
+                    <th scope="col">Telefone celular</th>
+                    <th scope="col">Telefone residencial</th>
+                    <th scope="col">Endereço residencial</th>
                     <th scope="col">Situação</th>
-                    <th scope="col">Local de uso</th>
+                    <th scope="col">Cidade</th>
                     <th scope="col">Responsavel</th>
-                    <th scope="col">Vencimento do seguro</th>
-                    <th scope="col">vencimento do IPVA</th>
+                    <th scope="col">Data de Nascimento</th>
+                    <th scope="col">Data de Cadastro</th>
                     <th scope="col">...</th>
                 </tr>
             </thead>
