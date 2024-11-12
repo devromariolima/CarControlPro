@@ -17,7 +17,7 @@ if ($result->num_rows > 0) {
 $mysqli->close();
 
 // Retornar o total de usuários
-echo $total_usuarios;
+// echo $total_usuarios;
 ?>
 
 
@@ -40,5 +40,5 @@ if ($result->num_rows > 0) {
 $mysqli->close();
 
 // Retornar o total de usuários
-echo $total_carros;
+// echo $total_carros;
 ?>
