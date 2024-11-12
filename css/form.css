@@ -1,0 +1,39 @@
+/* CSS personalizado */
+.container {
+    max-width: 800px;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    /* Fundo leve */
+    border-radius: 8px;
+    /* Arredondar os cantos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombras suaves */
+}
+
+.color-global {
+    background-color: #007bff;
+    /* Cor global para título */
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.form-group label {
+    font-weight: bold;
+    /* Dar destaque aos labels */
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+.color-global-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+a {
+    margin-bottom: 20px;
+    display: block;
+}
