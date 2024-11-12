@@ -30,7 +30,7 @@ include_once('conexao.php');
 <body>
   <aside class="sidebar">
     <header>
-      <img src="assets/viafertil.png" />
+      <img src=./assets/logo.svg />
       <span> Manutenção de Frotas </span>
     </header>
     <button>
