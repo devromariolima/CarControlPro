@@ -67,7 +67,7 @@ include_once('conexao.php');
         <button>
           <span>relatório de veículos</span>
         </button>
-        <a href="./consult car/consulta_veiculos.php" style="text-decoration: none; color: inherit;">
+        <a href="./Dashboard/Dashboard.php" style="text-decoration: none; color: inherit;">
           <button>Dashboard</button>
         </a>
       </div>
