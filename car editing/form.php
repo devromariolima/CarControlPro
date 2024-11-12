@@ -30,35 +30,6 @@ if (!empty($_GET['id'])) {
 
 ?>
 
-
-
-
-
-<!-- // $placa = $_POST['placa'];
-  // $descricao_do_veiculo = $_POST['descricao_do_veiculo'];
-  // $marca = $_POST['marca'];
-  // $modelo = $_POST['modelo'];
-  // $ano_de_fabricacao = $_POST['ano_de_fabricacao'];
-  // $valor = $_POST['valor'];
-  // $tara = $_POST['tara'];
-  // $unidade_federativa = $_POST['unidade_federativa'];
-  // $situacao = $_POST['situacao'];
-  // $local_de_uso = $_POST['local_de_uso'];
-  // $responsavel = $_POST['responsavel'];
-  // $vencimento_do_seguro = $_POST['vencimento_do_seguro'];
-  // $vencimento_do_ipva = $_POST['vencimento_do_ipva']; -->
-
-<!-- //   $result = mysqli_query($mysqli , "INSERT INTO carros(placa,descricao_do_veiculo,marca,modelo,ano_de_fabricacao,valor,tara,unidade_federativa,situacao,local_de_uso, responsavel,vencimento_do_seguro,vencimento_do_ipva)
-//  VALUES ('$placa','$descricao_do_veiculo','$marca','$modelo','$ano_de_fabricacao','$valor','$tara','$unidade_federativa','$situacao','$local_de_uso','$responsavel','$vencimento_do_seguro','$vencimento_do_ipva')"); -->
-
-<!-- 
-  //  header('Location: login.php'); -->
-<!-- } -->
-
-
-<!-- ?> -->
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 

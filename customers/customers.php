@@ -55,24 +55,24 @@ $result = $mysqli->query($sql);
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-envelope-o">
                         </i>
-                        Veiculos
+                        Clientes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="../car registration/form_cadastro.php">Cadastrar Veiculos</a>
+                        <a class="dropdown-item" href="../car registration/form_cadastro.php">Cadastrar clientes</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="../reports car/relatorio_carros_geral.php">Relatorios</a>
+                        <a class="dropdown-item" href="../reports car/relatorio_carros_geral.php">Relatorios de clientes</a>
                     </div>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-envelope-o">
                         </i>
-                        Manutenção de veiculos
+                        Dashboard de Clientes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Cadastrar Manutenção</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Relatorios</a>
+                        <a class="dropdown-item" href="#">Dashboard</a>
+                        <!-- <div class="dropdown-divider"></div> -->
+                        <!-- <a class="dropdown-item" href="#">Dashboard de Clientes</a> -->
                     </div>
                 </li>
             </ul>
