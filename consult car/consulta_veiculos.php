@@ -18,7 +18,7 @@ $result = $mysqli->query($sql);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- link CSS-->
-  <link rel="stylesheet" href="css/consulta.css">
+  <link rel="stylesheet" href="../css/consulta.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <!-- Bootstrap icones-->
