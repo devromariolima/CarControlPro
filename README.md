@@ -34,11 +34,11 @@
 
 ### Veja imagens do Projeto
 
-<img src="https://i.imgur.com/wSxMqWf.png" alt="Desktop Screenshot" width="600"/>
+<img src="https://i.imgur.com/UgZR0h8.png" alt="Desktop Screenshot" width="600"/>
 
-<img src="https://i.imgur.com/B7xD64U.png" alt="Desktop Screenshot" width="600"/>
+<img src="https://i.imgur.com/kb9LMAo.png" alt="Desktop Screenshot" width="600"/>
 
-<img src="https://i.imgur.com/3Tlu8wk.png" alt="Desktop Screenshot" width="600"/>
+<!-- <img src="https://i.imgur.com/3Tlu8wk.png" alt="Desktop Screenshot" width="600"/> -->
 
 <img src="https://i.imgur.com/udICEto.png" alt="Desktop Screenshot" width="600"/>
 

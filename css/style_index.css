@@ -1,18 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-h1 {text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-        font-family: 'Raleway', sans-serif;
-        line-height: 2.5rem;
-        color: white;
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
+  line-height: 2.5rem;
+  color: white;
 
-      }
+}
 
 .login-page {
   width: 360px;
   padding: 8% 0 0;
   margin: auto;
 }
+
 .form {
   position: relative;
   z-index: 1;
@@ -24,6 +26,7 @@ h1 {text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 
 }
+
 .form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
@@ -35,11 +38,12 @@ h1 {text-align: center;
   box-sizing: border-box;
   font-size: 14px;
 }
+
 .form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #2e2c36;
+  background: #3367f5;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -49,36 +53,47 @@ h1 {text-align: center;
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.form button:hover,.form button:active,.form button:focus {
+
+.form button:hover,
+.form button:active,
+.form button:focus {
   background: #2e2c36;
 }
+
 .form .message {
   margin: 15px 0 0;
   color: #2e2c36;
   font-size: 12px;
 }
+
 .form .message a {
   color: #2e2c36;
   text-decoration: none;
 }
+
 .form .register-form {
   display: none;
 }
+
 .container {
   position: relative;
   z-index: 1;
   max-width: 300px;
   margin: 0 auto;
 }
-.container:before, .container:after {
+
+.container:before,
+.container:after {
   content: "";
   display: block;
   clear: both;
 }
+
 .container .info {
   margin: 50px auto;
   text-align: center;
 }
+
 .container .info h1 {
   margin: 0 0 15px;
   padding: 0;
@@ -86,23 +101,32 @@ h1 {text-align: center;
   font-weight: 300;
   color: #1a1a1a;
 }
+
 .container .info span {
   color: #4d4d4d;
   font-size: 12px;
 }
+
 .container .info span a {
   color: #000000;
   text-decoration: none;
 }
+
 .container .info span .fa {
   color: #EF3B3A;
 }
+
 body {
-  background: #2e2c36; //fallback for old browsers
+  background: linear-gradient(to bottom, rgb(103, 119, 153), rgba(255, 255, 255, 1));
+  background-repeat: no-repeat;
+  /* Evita repetição do gradiente */
+  background-attachment: fixed;
+  /* Fixa o gradiente na tela */
+  /* //fallback for old browsers */
   /* background: rgb(141,194,111); */
   /* background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%); */
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;   
-   height:97vh;
+  -moz-osx-font-smoothing: grayscale;
+  height: 97vh; */
 }

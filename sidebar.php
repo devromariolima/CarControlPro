@@ -39,7 +39,7 @@ include_once('conexao.php');
     </button>
 
     <button onclick="handleHeaderClicked('maintenance')">
-      <span class="material-symbols-outlined"> build </span>
+      <span class="material-symbols-outlined"> group </span>
       <span>Clientes</span>
       <span class="material-symbols-outlined"> expand_more </span>
     </button>
